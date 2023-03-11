@@ -16,6 +16,11 @@ input {
 
 body {
   background: rgb(231, 238, 183);
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 .wrapper {
@@ -87,7 +92,7 @@ label:active {
     font-size: 100%;
   }
   .wrapper {
-    width: 77rem;
+    width: 45rem;
   }
   label:hover {
     color: darkturquoise;
