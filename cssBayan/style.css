@@ -1,0 +1,111 @@
+@font-face {
+  font-family: Roboto;
+  src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+input {
+  display: none;
+}
+
+body {
+  background: rgb(231, 238, 183);
+}
+
+.wrapper {
+  width: 19rem;
+  margin: 0 auto;
+}
+
+header {
+  height: 5rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.header-title {
+  font-size: 3rem;
+}
+
+label {
+  padding: 1rem;
+  box-shadow: 0.2rem 0.2rem 2rem 0.2rem gray;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.mem-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 0.5rem;
+}
+
+.mem-title {
+  flex-grow: 1;
+}
+
+.mem-icon {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+input[type="radio"]:checked + label {
+  color: darkturquoise;
+  transition: 0.5s;
+  cursor: pointer;
+}
+input[type="radio"]:checked + label .mem-icon {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+input[type="radio"]:checked + label .mem-image {
+  width: 100%;
+  transition: 0.5s;
+  margin-top: 1rem;
+}
+
+.mem-image {
+  transition: 0.5s;
+  width: 0;
+}
+label:active {
+  cursor: crosshair;
+  box-shadow: 0.2rem 0.2rem 2rem 1rem #ed8585;
+}
+@media (min-width: 1850px) {
+  html {
+    font-size: 100%;
+  }
+  .wrapper {
+    width: 77rem;
+  }
+  label:hover {
+    color: darkturquoise;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  label:hover .mem-icon {
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+  label:hover .mem-image {
+    width: 100%;
+    transition: 0.5s;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
