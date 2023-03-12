@@ -17,6 +17,7 @@ input {
 body {
   background: rgb(231, 238, 183);
   overflow-y: scroll;
+  padding-bottom: 5rem;
 }
 
 body::-webkit-scrollbar {
@@ -46,13 +47,14 @@ label {
   display: flex;
   flex-direction: column;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .mem-header {
   width: 100%;
   display: flex;
   align-items: center;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .mem-title {
@@ -62,11 +64,12 @@ label {
 .mem-icon {
   transform: rotate(0deg);
   transition: 0.5s;
+  font-size: 0.9rem;
 }
 input[type="radio"]:checked + label {
   color: darkturquoise;
   transition: 0.5s;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 input[type="radio"]:checked + label .mem-icon {
   transform: rotate(45deg);
@@ -97,7 +100,7 @@ label:active {
   label:hover {
     color: darkturquoise;
     transition: 0.5s;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
   label:hover .mem-icon {
     transform: rotate(45deg);
@@ -112,5 +115,8 @@ label:active {
   }
   h2 {
     font-size: 2rem;
+  }
+  .mem-icon {
+    font-size: 1.5rem;
   }
 }
