@@ -1,2 +1,0 @@
-# cssBayan
-rs code jam 

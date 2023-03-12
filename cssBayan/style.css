@@ -1,0 +1,168 @@
+@font-face {
+  font-family: Roboto;
+  src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+input {
+  display: none;
+}
+
+body {
+  background: rgb(231, 238, 183);
+  overflow-y: scroll;
+  padding-bottom: 5rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: blue;
+}
+main:hover {
+  color: black;
+}
+main:hover .mem-icon {
+  display: block;
+}
+.header-title {
+  font-size: 3rem;
+}
+
+label {
+  padding: 1rem 1rem 1rem 1rem;
+  box-shadow: 0.2rem 0.2rem 2rem 0.2rem gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.mem-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mem-title {
+  flex-grow: 1;
+  font-size: 0.9rem;
+}
+
+.mem-icon {
+  display: none;
+  transform: rotate(0deg);
+  transition: 0.5s;
+  font-size: 0.9rem;
+}
+input[type="radio"]:checked + label {
+  /* color: darkturquoise; */
+  transition: 0.5s;
+  color: black;
+  /* cursor: pointer; */
+}
+input[type="radio"]:checked + label .mem-icon {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+input[type="radio"]:checked + label .mem-image {
+  width: 100%;
+  transition: 0.5s;
+  margin-top: 1rem;
+}
+
+.mem-image {
+  transition: 0.5s;
+  width: 0;
+  /* margin-top: 1rem; */
+  /* margin-bottom: 1rem; */
+}
+label:active {
+  cursor: wait;
+  box-shadow: 0.2rem 0.2rem 2rem 1rem #ed8585;
+}
+label:active .mem-image {
+  opacity: 0.5;
+}
+@media (hover: hover) {
+  label:hover .mem-icon {
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+  label:hover .mem-image {
+    width: 50%;
+    transition: 0.5s;
+  }
+}
+@media (min-width: 1850px) {
+  html {
+    font-size: 100%;
+  }
+  .wrapper {
+    width: 80rem;
+  }
+
+  header {
+    height: 7rem;
+  }
+  .header-title {
+    font-size: 4rem;
+  }
+  .mem-title {
+    font-size: 3rem;
+  }
+  .mem-icon {
+    font-size: 2.5rem;
+  }
+
+  input[type="radio"]:checked + label .mem-image {
+    width: 50%;
+
+    /* transition: 0.5s;
+    margin-top: 1rem; */
+  }
+  label {
+    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  }
+}
+@media (max-width: 1200px) and (min-width: 600px) {
+  .wrapper {
+    width: 100vw;
+  }
+  .mem-title {
+    font-size: 2rem;
+  }
+  .mem-icon {
+    font-size: 1.5rem;
+  }
+  input[type="radio"]:checked + label .mem-image {
+    width: 70%;
+  }
+  label {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+}
